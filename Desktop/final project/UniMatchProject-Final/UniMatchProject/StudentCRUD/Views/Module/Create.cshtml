@@ -1,0 +1,84 @@
+@model StudentCRUD.Models.Module
+
+
+<style>
+    /* Page background */
+    body {
+        background-color: #000;
+    }
+
+    /* Card / form container */
+    .dark-card {
+        background-color: #121212; /* light black */
+        color: #fff;
+        border-radius: 12px;
+    }
+
+        /* Labels */
+        .dark-card .form-label {
+            color: #ccc;
+        }
+
+        /* Inputs & dropdowns */
+        .dark-card .form-control,
+        .dark-card .form-select {
+            background-color: #1e1e1e;
+            color: #fff;
+            border: 1px solid #333;
+        }
+
+            /* Focus effect */
+            .dark-card .form-control:focus,
+            .dark-card .form-select:focus {
+                background-color: #1e1e1e;
+                color: #fff;
+                border-color: #666;
+                box-shadow: none;
+            }
+
+        /* Checkbox */
+        .dark-card .form-check-input {
+            background-color: #1e1e1e;
+            border: 1px solid #555;
+        }
+
+            .dark-card .form-check-input:checked {
+                background-color: #fff;
+                border-color: #fff;
+            }
+
+        /* Buttons */
+        .dark-card .btn-dark {
+            background-color: #fff;
+            color: #000;
+            border: none;
+        }
+
+            .dark-card .btn-dark:hover {
+                background-color: #ccc;
+            }
+</style>
+
+
+<h2 class="text-white text-center mt-5">Create Module</h2>
+
+<div class="container mt-4">
+    <form method="post" class="p-4 shadow rounded dark-card">
+
+        <div class="mb-3">
+            <label class="form-label">Module Code</label>
+            <input asp-for="ModuleCode" class="form-control" placeholder="Enter module code" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Module Name</label>
+            <input asp-for="ModuleName" class="form-control" placeholder="Enter module name" />
+        </div>
+
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-dark">Save</button>
+            <a href="/Module" class="btn btn-secondary">Back</a>
+        </div>
+
+    </form>
+</div>
