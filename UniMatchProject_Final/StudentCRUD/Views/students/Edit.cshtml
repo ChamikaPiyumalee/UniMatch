@@ -1,0 +1,97 @@
+@model StudentCRUD.Models.Student
+
+
+<style>
+    /* Page background */
+    body {
+        background-color: #000;
+    }
+
+    /* Card / form container */
+    .dark-card {
+        background-color: #121212; /* light black */
+        color: #fff;
+        border-radius: 12px;
+    }
+
+        /* Labels */
+        .dark-card .form-label {
+            color: #ccc;
+        }
+
+        /* Inputs & dropdowns */
+        .dark-card .form-control,
+        .dark-card .form-select {
+            background-color: #1e1e1e;
+            color: #fff;
+            border: 1px solid #333;
+        }
+
+            /* Focus effect */
+            .dark-card .form-control:focus,
+            .dark-card .form-select:focus {
+                background-color: #1e1e1e;
+                color: #fff;
+                border-color: #666;
+                box-shadow: none;
+            }
+
+        /* Checkbox */
+        .dark-card .form-check-input {
+            background-color: #1e1e1e;
+            border: 1px solid #555;
+        }
+
+            .dark-card .form-check-input:checked {
+                background-color: #fff;
+                border-color: #fff;
+            }
+
+        /* Buttons */
+        .dark-card .btn-dark {
+            background-color: #fff;
+            color: #000;
+            border: none;
+        }
+
+            .dark-card .btn-dark:hover {
+                background-color: #ccc;
+            }
+</style>
+
+
+<div class="container mt-5">
+    <h2 class="mb-4">Edit Student</h2>
+
+    <form method="post" class="p-4 shadow rounded dark-card">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label class="form-label"> Student Name</label>
+            <input asp-for="Name" class="form-control"  />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Student Id</label>
+            <input asp-for="StudentId" class="form-control"  />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email </label>
+            <input asp-for="Email" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Faculty </label>
+            <input asp-for="Faculty" class="form-control"  />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Batch </label>
+            <input asp-for="Batch" class="form-control"  />
+        </div>
+
+
+
+        <button type="submit" class="btn btn-warning">Update</button>
+        <a href="/Student" class="btn btn-secondary">Back</a>
+
+    </form>
+</div>
